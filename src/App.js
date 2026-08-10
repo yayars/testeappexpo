@@ -1,58 +1,120 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View, Image } from 'react-native'
-import CardUser from './components/CardUser'
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.box}>
-        <Image 
-          style={styles.logo} 
-          source={'https://cdn.vectorstock.com/i/500p/66/46/justice-scales-logo-law-amp-legal-vector-27726646.jpg'}
+
+
+      <View style={styles.header}>
+        <Image
+          style={styles.logo}
+           source={'https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456'}
         />
-        <Text>Meu App</Text>
+        <Text style={styles.titulo}>IFFlix</Text>
       </View>
-      <View style={styles.box2}>
-        <CardUser 
-          avatar={'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/3840px-User-avatar.svg.png'}
-          name={'Yasmin Rodrigues'}
-          email={'yayars28@gmail.com'}
-        />
-        <CardUser 
-          avatar={'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/3840px-User-avatar.svg.png'}
-          name={'Ana Beatriz'}
-          email={'aninha@gmail.com'}
-        />
-        <CardUser 
-          avatar={'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/3840px-User-avatar.svg.png'}
-          name={'Robert'}
-          email={'robert@gmail.com'}
-        />
+
+
+      <View style={styles.linha}>
+        <View style={styles.card}>
+          <Image
+            style={styles.imagem}
+            source={'https://m.media-amazon.com/images/S/pv-target-images/2745382833c26f576e1c63466a8cb9ee8ff1f30d3cc05e90c009d014fa0b07bc.jpg'}
+          />
+          <Text style={styles.nome}>O Mentalista</Text>
+          <Text style={styles.plataforma}>Netflix</Text>
+        </View>
+
+
+        <View style={styles.card}>
+          <Image
+            style={styles.imagem}
+            source={'https://daniquedisse.com.br/wp-content/uploads/2017/03/antes-e-depois-one-tree-hill.png'}
+          />
+          <Text style={styles.nome}>One Tree Hill</Text>
+          <Text style={styles.plataforma}>Netflix</Text>
+        </View>
       </View>
+
+
+      <View style={styles.linha}>
+        <View style={styles.card}>
+          <Image
+            style={styles.imagem}
+            source={'https://mundonegro.inf.br/wp-content/uploads/2025/03/Copia-de-Copia-de-CAPA-MN-2022-2025-03-12T161209.170-768x432.jpg'}
+          />
+          <Text style={styles.nome}>Beauty in Black</Text>
+          <Text style={styles.plataforma}>Netflix</Text>
+        </View>
+
+
+        <View style={styles.card}>
+          <Image
+            style={styles.imagem}
+            source={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSorCl3HXTc--xAjoRVeLFcrAFK6WCR24-jAbWBAIH6Ycsxa4CSqqLc2n5U&s=10'}
+          />
+          <Text style={styles.nome}>Breaking Bad</Text>
+          <Text style={styles.plataforma}>Netflix</Text>
+        </View>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f0b5e8',
     flex: 1,
+    paddingTop: 60,
+    alignItems: 'center',
+    backgroundColor: '#fff',
   },
-  box:{
-    flex: 1,
-    backgroundColor: '#f5bed8',
-    padding: 20,
+
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 20
+    marginBottom: 30,
   },
-  box2:{
-    flex: 5,
-    backgroundColor: '#db91b4',
+
+  logo: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 10,
   },
-  logo:{
-    width: 100,
-    height: 100
-  }
+
+  titulo: {
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
+
+  linha: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+
+  card: {
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+
+  imagem: {
+    width: 120,
+    height: 120,
+    borderRadius: 15,
+    borderWidth: 2,
+  },
+
+  nome: {
+    fontWeight: 'bold',
+    marginTop: 8,
+    textAlign: 'center',
+  },
+
+  plataforma: {
+    color: 'gray',
+    fontSize: 12,
+  },
 });

@@ -1,46 +1,37 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native';
 
-export default function CardUser({ avatar, name, email }) {
-    return(
-        <View style={styles.carUser}>
-            <Image 
-                style={styles.avatar} 
-                source={avatar}
-            />
-            <View style={styles.userDetails}>
-            <Text style={styles.name}>{name}</Text>
-            <Text style={styles.email}>{email}</Text>
-            </View>
-        </View>
-    )
+export default function CardSerie({ titulo, plataforma }) {
+  return (
+    <View style={styles.card}>
+      <View style={styles.imagem}></View>
+
+      <Text style={styles.titulo}>{titulo}</Text>
+      <Text style={styles.plataforma}>{plataforma}</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-  carUser: {
-    backgroundColor: '#ffffff',
-    padding: 10,
-    borderRadius: 10,
-    width: '90%',
-    marginHorizontal: '5%',
-    marginTop: 20,
-    flexDirection: 'row',
+  card: {
+    width: 140,
     alignItems: 'center',
-    gap: 15
+    margin: 10,
   },
-  avatar: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+
+  imagem: {
+    width: 100,
+    height: 100,
+    borderWidth: 2,
+    borderRadius: 15,
+    marginBottom: 10,
   },
-  userDetails: {
-    gap: 5
-  },
-  name: {
-    fontSize: 20,
+
+  titulo: {
     fontWeight: 'bold',
+    textAlign: 'center',
   },
-  email: {
-    fontSize: 18,
-    color: '#4f4f4f',
-  }
+
+  plataforma: {
+    color: 'gray',
+  },
 });
