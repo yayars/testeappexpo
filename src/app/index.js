@@ -1,7 +1,8 @@
+import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
-export default function App() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
 
@@ -12,9 +13,8 @@ export default function App() {
             style={styles.logo}
             source={'https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456'}
           />
-          <Text style={styles.titulo}>IFFlix</Text>
+          <Text style={styles.titulo}>Home Teste</Text>
         </View>
-
 
         <View style={styles.linha}>
           <View style={styles.card}>
@@ -57,6 +57,20 @@ export default function App() {
             <Text style={styles.nome}>Breaking Bad</Text>
             <Text style={styles.plataforma}>Netflix</Text>
           </View>
+        </View>
+
+        <View style={styles.botoes}>
+          <Link href="/users">
+            <View style={styles.botao}>
+              <Text style={styles.textoBotao}>Ir para Usuários</Text>
+            </View>
+          </Link>
+
+          <Link href="/userscopy">
+            <View style={styles.botao}>
+              <Text style={styles.textoBotao}>Ir para relatos</Text>
+            </View>
+          </Link>
         </View>
 
         <StatusBar style="auto" />
@@ -109,7 +123,7 @@ const styles = StyleSheet.create({
   },
 
   imagem: {
-    width: 140,
+    width: 180,
     height: 180,
     borderRadius: 15,
   },
@@ -124,4 +138,23 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 12,
   },
+
+  botoes: {
+  marginTop: 30,
+  flexDirection: 'row',
+  gap: 20,
+},
+
+botao: {
+  backgroundColor: '#000',
+  paddingVertical: 12,
+  paddingHorizontal: 20,
+  borderRadius: 8,
+},
+
+textoBotao: {
+  color: '#fff',
+  fontWeight: 'bold',
+},
+
 });
