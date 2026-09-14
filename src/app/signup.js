@@ -1,20 +1,21 @@
 import { Link } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Index() {
+export default function Signup() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.texto}>
-        Loading
+      <Text style={styles.titulo}>
+        Cadastrar
       </Text>
 
       <Link href="/login" style={styles.botao}>
         Login
       </Link>
 
-      <StatusBar style="auto" />
+      <Link href="/home" style={styles.botao}>
+        Home
+      </Link>
 
     </View>
   );
@@ -22,23 +23,23 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,                    //quantidade q vai ocupar a tela (no caso 100%)
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    
+    gap: 10,
   },
 
-  texto: {
+  titulo: {
     fontSize: 16,
-    marginBottom: 20,
+    marginBottom: 15,
   },
 
   botao: {
     borderWidth: 2,
-    borderColor: '#ff0000',
+    borderColor: '#ec66c4',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 50,
-    color: '#000000',
-      },
+    color: '#000',
+  },
 });
