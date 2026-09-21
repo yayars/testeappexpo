@@ -1,3 +1,26 @@
+Instalação do Expo
+npx create-expo-app@latest --template
+
+- Blank
+- nome do app
+- For learning with Expo Go (SDK 54)
+
+---------------------------------------------
+Instalação do Expo Router
+
+- https://docs.expo.dev/router/installation/
+- Fazer etapas 1, 2, 3
+- Criar pasta app dentro de src
+- Colocar a tela inicial (componente) na pasta app (index.js)
+- Rodar a etapa 6 (npx expo start --clear)
+ 
+ ---------------------------------------------
+
+- Mais opções de configuração podem ser adicionadas aqui:
+https://reactnavigation.org/docs/bottom-tab-navigator#options
+
+ ---------------------------------------------
+
 desenvolvimento mobile:
 # Tópicos Importantes para Avaliação
 
@@ -32,7 +55,9 @@ Não
 Não, mas a grande maioria funciona porém tendo algumas exceções. 
 
 - Quais as principais formas de navegação com Expo Router?
--Stack
--Tabs
--Drawer
--Modal
+-Stack - empilhamento (uma tela em cima da outra).
+-Tabs - barra de navegção em baixo.
+-Drawer - menu "hamburguer" (lateral).
+-Modal - mensagem no meio tela (tipo uma mensagem) - continua sendo um stack.
+
+
